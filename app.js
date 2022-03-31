@@ -2,6 +2,7 @@
 // alert("Hello from JS")
 // prompt("Enter your names")
 // console.log("Hello from JS")
+// typeof value
 
 // Values
 // 235 - Number
@@ -94,10 +95,10 @@
 // Comparision operators
 // <, >, <=, >=, ==(loose equality operator), ===(Strict equality operator),  !=(loose), !==(Strict)
 
-// console.log(2=="2");
-// console.log(2==="2");
-// console.log(2!="2");
-// console.log(2!=="2");
+// console.log(2=="2"); //true
+// console.log(2==="2"); //false
+// console.log(2!="2"); //false
+// console.log(2!=="2"); //true
 
 // Assignment operators (Abbrevation operators)
 //  +=, -=, *=, /=, %=, **=, ++,--
