@@ -128,3 +128,54 @@ const age = 26
 // Template literals (ES6)
 // console.log(`My name is ${firstName} and my age is ${age}`);
 // console.log(`${90+100/20}`);
+
+// Statemnts and Expressions
+// Statement - does a particular task
+// Expression - Evaluates to single value
+
+// type conversion and coersion
+
+let num = ""
+let num1 = 0;
+
+
+// let stringNum = String(num)
+// console.log(typeof stringNum);
+// console.log(stringNum);
+
+// console.log(Number(num) + 50);
+
+// ""--> false & everything else returns true
+// 0 ---> false & everything else returns true
+// console.log(Boolean(num1));
+
+// Coercion
+
+// String coercion
+// console.log("235"+10); //23510
+// console.log("235"+true);//235true
+// console.log("abc"+undefined);//abcundefined
+
+// // Number coercion
+// console.log("230"-10); // 220
+// console.log("230"*10); // 2300
+// console.log("230"/10); //23
+// console.log("230"**10); //4.1426511213648997e+23
+// console.log("230"%10); //0
+// console.log(true + 20); // 21
+// console.log(false + 20); // 20
+// console.log(undefined + 20); // NaN - Not A Number
+// console.log("23abc"*10);//NaN
+// console.log("23" < 10); //false
+// console.log("23" > 10); //true
+// console.log(true > 10); //false
+// console.log(true < 10); //false
+
+// Falsy values - "",undefined,0, NaN, null
+// console.log(Boolean(""));
+// console.log(Boolean(undefined));
+// console.log(Boolean(0));
+// console.log(Boolean(NaN));
+// console.log(Boolean(null));
+// Truthy values
+// Except for falsy values the rest are called as truthy values
