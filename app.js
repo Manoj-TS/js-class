@@ -56,7 +56,6 @@
 // console.log(typeof grade);
 // console.log(typeof empty);
 
-
 // Rules and conventions to create variables
 // Rules
 // 1. Can only start with letters and "_"
@@ -91,7 +90,6 @@
 
 // result = 50/10-40+20*(30/2)%3
 
-
 // Comparision operators
 // <, >, <=, >=, ==(loose equality operator), ===(Strict equality operator),  !=(loose), !==(Strict)
 
@@ -109,18 +107,17 @@
 // console.log(num-=20); // num = num - 50
 // console.log(num*=20); // num = num * 50
 // console.log(num++); // num = num + 1
-// console.log(num); // 
+// console.log(num); //
 
 // difference btw a variable and a string
-const firstName = "Manoj"
-const age = 26
+// const firstName = "Manoj";
+// const age = 26;
 
 // console.log(firstName); //Manoj
 // console.log("firstName"); //firstName
 
 // console.log(age+10);
 // console.log("age"+10);
-
 
 // String concatination
 // console.log("My name is "+firstName+" and my age is "+age);
@@ -135,9 +132,8 @@ const age = 26
 
 // type conversion and coersion
 
-let num = ""
-let num1 = 0;
-
+// let num = "";
+// let num1 = 0;
 
 // let stringNum = String(num)
 // console.log(typeof stringNum);
@@ -179,3 +175,175 @@ let num1 = 0;
 // console.log(Boolean(null));
 // Truthy values
 // Except for falsy values the rest are called as truthy values
+
+// ---------Revision----------
+// let number = 123;
+
+// console.log(typeof number);
+
+// let strNum = String(number);
+// console.log(typeof strNum);
+
+// let str = "abc123"
+
+// let numStr = Number(str)
+// console.log(numStr, typeof numStr);
+
+// let number = 123
+// let hasLiscence = true
+// let randomVar;
+// let nullValue = null
+
+// // String coercion
+// console.log("abc" + number); // abc123
+// console.log("abc" + hasLiscence); //abctrue
+// console.log("abc" + randomVar); //abcundefined
+// console.log("abc" + nullValue); //abcnull
+
+// // Number coersion
+
+// Day 4
+// Statements
+// if statement, if else statement,
+
+// let hasLiscence = false
+// let age = 18;
+
+// if(hasLiscence){
+//     console.log("Eligible to work in our company");
+// }
+
+// Boolean logic -- &&(and), ||(or), !(not)
+// && - returns true only if all the conditions are true else returns false
+// || -  returns false if all the conditions are false else returns true
+// ! - returns true for false and false for true
+// if(hasLiscence || age > 20){
+//     console.log("Eligible to work in our company");
+// }else{
+//     console.log("Not eligible to work");
+// }
+
+// if(!hasLiscence){
+//     console.log("Can't work");
+// }
+
+// let marks = 75
+
+// if(marks >= 80){
+//     console.log("Grade A");
+// }else if(marks >= 70){
+//     console.log("Grade B");
+// }else if(marks >= 60){
+//     console.log("Grade C");
+// }else{
+//     console.log("Fail");
+// }
+
+// hasLiscence = true
+// if(!hasLiscence) console.log("Can't work");
+// else console.log("Can work");
+
+// let day = "Wednesday";
+
+// switch (day) {
+//   case "Monday":
+//     console.log("Go college");
+//     break;
+//   case "Tuesday":
+//     console.log("Go watch movie");
+//     break;
+//   case "Wednesday":
+//   case "Thursday":
+//   case "Friday":
+//     console.log("Go play football");
+//     break;
+//   case "Saturday":
+//   case "Sunday":
+//     console.log("Take rest");
+//     break;
+//   default:
+//     console.log("Not a proper day");
+// }
+
+// Looping statements for, while, do while
+// continue, break keywords
+// for (let i = 0; i < 10; i++) {
+//   if (i == 3) continue;
+//   else if (i == 6) break;
+//   console.log("Value of i is " + i);
+// }
+
+// while loop
+// let i = -10;
+
+// while(i >= 0){
+//     console.log("Value of i is "+ i);
+//     i--
+// }
+
+// do while
+
+// do {
+//   console.log("Value of i is " + i);
+//   i--;
+// } while (i >= 0);
+
+// Functions -- collection of related statements
+// 1.Function definition
+// function juiceMaker(fruit1, fruit2, fruit3){ //fruit1, fruit2 fruit3 are the parameters to the juiceMaker function
+//     console.log(`Juice with ${fruit1} ${fruit2} ${fruit3} is ready`);
+// }
+// // Calling a function or Invoking a function
+// juiceMaker("apple","orange","grapes") // apple, orange, grapes --> arguments
+// juiceMaker("Mango","Banana","Pineapple")
+
+// 2.Function expression
+// const juiceMaker = function(fruit1,fruit2,fruit3){
+//     console.log(`Juice with ${fruit1} ${fruit2} ${fruit3} is ready`);
+// }
+// juiceMaker("apple","orange","grapes") // apple, orange, grapes --> arguments
+// juiceMaker("Mango","Banana","Pineapple")
+
+// // 3.Arrow function(ES6) - has no function keyword, and cannot have 'this' keyword
+// const juiceMaker = (fruit1,fruit2,fruit3)=>{
+//     console.log(`Juice with ${fruit1} ${fruit2} ${fruit3} is ready`);
+// }
+
+// juiceMaker("apple","orange","grapes") // apple, orange, grapes --> arguments
+// juiceMaker("Mango","Banana","Pineapple")
+
+// Returning values from functions
+// const fruitSlicer = (fruitCount,sliceCountPerFruit)=>{
+//     // const slices = fruitCount *sliceCountPerFruit
+//     // return slices
+
+//     return fruitCount * sliceCountPerFruit
+// }
+
+// const fruitSlicer = (fruitCount, sliceCountPerFruit) => fruitCount * sliceCountPerFruit // return keyword is not mandatory if single statement is present
+// const fruitSlicer = fruitCount => fruitCount * 10 // Parenthesis for a single parameter is not mandatory but mandatory if more than one parameter is present
+
+// console.log(fruitSlicer(10));
+
+// functions calling other functions
+const fruitSlicer = (fruitCount) => {
+  if (fruitCount >= 10) {
+    console.log("Fruit count too large");
+    return;
+  }
+
+  return fruitCount * 10;
+};
+
+const juiceMaker = (fruit, fruitCount) => {
+  const fruitPieces = fruitSlicer(fruitCount);
+
+  if(fruitPieces){
+    console.log(`Juice with ${fruitPieces} ${fruit} pieces is ready`);
+  }else{
+      console.log("Could not prepare juice, check for fruit count");
+  }
+  
+};
+
+juiceMaker("Apple", 50);
