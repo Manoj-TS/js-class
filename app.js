@@ -326,24 +326,217 @@
 // console.log(fruitSlicer(10));
 
 // functions calling other functions
-const fruitSlicer = (fruitCount) => {
-  if (fruitCount >= 10) {
-    console.log("Fruit count too large");
-    return;
-  }
+// const fruitSlicer = (fruitCount) => {
+//   if (fruitCount >= 10) {
+//     console.log("Fruit count too large");
+//     return;
+//   }
 
-  return fruitCount * 10;
-};
+//   return fruitCount * 10;
+// };
 
-const juiceMaker = (fruit, fruitCount) => {
-  const fruitPieces = fruitSlicer(fruitCount);
+// const juiceMaker = (fruit, fruitCount) => {
+//   const fruitPieces = fruitSlicer(fruitCount);
 
-  if(fruitPieces){
-    console.log(`Juice with ${fruitPieces} ${fruit} pieces is ready`);
-  }else{
-      console.log("Could not prepare juice, check for fruit count");
-  }
-  
-};
+//   if(fruitPieces){
+//     console.log(`Juice with ${fruitPieces} ${fruit} pieces is ready`);
+//   }else{
+//       console.log("Could not prepare juice, check for fruit count");
+//   }
 
-juiceMaker("Apple", 50);
+// };
+
+// juiceMaker("Apple", 50);
+
+// let numVal = 123
+// let strVal = "123"
+// let strVal1 = "abc123"
+// let boolVal = true
+// let boolVal1 = false
+
+// // Explicit type conversion
+// // String conversion
+// const strNumVal = String(numVal)
+// console.log(typeof strNumVal);
+// console.log(typeof numVal);
+// console.log(typeof String(true));
+// console.log(typeof String(undefined));
+// console.log(String(undefined));
+// console.log(String(null));
+
+// // Number conversion
+// console.log(Number(strVal));
+// console.log(typeof Number(strVal1));
+// console.log(Number(true));
+// console.log(Number(false));
+// console.log(Number(undefined));
+// console.log(Number(null));
+// console.log(Number(""));
+
+// // Boolean conversion
+// console.log(Boolean(123)); //true
+// console.log(Boolean(-123)); //true
+// console.log(Boolean(-1.23)); //true
+// console.log(Boolean(0)); // false
+// console.log(Boolean("abc")); //true
+// console.log(Boolean("abc123")); //true
+// console.log(Boolean("")); //false
+// console.log(Boolean(undefined));
+// console.log(Boolean(null));
+// console.log(Boolean(NaN));
+
+// Truthy values and Falsy values
+// falsy values - 0, "", undefined, null, NaN
+
+// Truthy values -  except falsy values all the rest are truthy values
+
+// Implicit type conversion (Coercion)
+
+// String coercion
+console.log("abc" + 123);
+console.log("abc" + true);
+console.log("abc" + undefined);
+console.log("abc" + null);
+console.log("abc" + NaN);
+
+// Number coercion
+// console.log("123"*10); // 1230
+// console.log("123"-10); // 113
+// console.log("123"/10); // 12.3
+// console.log("123"%10); // 3
+// console.log("123"**10); // 3
+// console.log(true * 10);
+// console.log(true - 10);
+// console.log("abc123"*10); // NaN
+// console.log(undefined*10); // NaN
+// console.log(null*10); // 0
+// console.log(""*10); // 0
+// console.log(NaN*10); // NaN
+// console.log("123" < 20);
+// console.log("123" > 20);
+// console.log("123" != 20);
+// console.log(NaN < 10); // false
+// console.log(NaN > 10); // false
+// console.log(undefined > 20); // false
+
+// Boolean coercion
+// if(AudioParam.data){
+//   console.log("True");
+// }else{
+//   console.log("False");
+// }
+
+// Functions calling function
+
+// const fruitSlicer = (fruitCount) => {
+//   if (fruitCount >= 10) {
+//     console.log("Fruit count too large");
+//     return
+//   }
+//   return fruitCount * 10
+//   console.log("Hello");
+// };
+
+// const juiceMaker = (fruit, fruitCount) => {
+//   const fruitPieces = fruitSlicer(fruitCount);
+
+//   if(fruitPieces){
+//     console.log(`Juice with ${fruitPieces} ${fruit} pieces is ready`);
+//   }else{
+//       console.log("Could not prepare juice, check for fruit count");
+//   }
+
+// };
+
+// juiceMaker('Apple', 12)
+
+// for (let i = 15; i <= 50; i++) {
+//   if (i % 3 == 0) {
+//     if (i >= 30 && i <= 40) continue;
+//     else {
+//       if (i == 45) break;
+//       else console.log(i);
+//     }
+//   }
+// }
+
+// Destructuring
+
+// const a = arr[0]
+// const b = arr[1]
+// const c = arr[2]
+// const d = arr[3]
+
+// Basic destructuring
+// const [a,b,c] = arr
+// console.log(a,b,c);
+
+// Leaving a hole
+// const [a, , , b, c] = arr;
+// console.log(a, b, c);
+
+// let a = 5;
+// let b = 6;
+
+// swapping
+// let temp = a
+// a = b
+// b= a
+
+// [b,a]=[a,b]
+// console.log(a,b);
+
+// function return2Values(){
+//   return [20,50]
+// }
+
+// const [val1, val2] = return2Values();
+
+// console.log(val1,val2);
+
+
+// Destructuring nested array
+// const arr = [1, 2, 6, [10, 20, 30, [10, 50]],100,200];
+
+
+// const [, , , [, , , [a, b]]] = arr;
+// console.log(a, b);
+
+// Setting default values
+// const [a,b,c,d,e=10,f=30] = arr
+
+// console.log(a,b,c,d,e,f);
+
+// Object destructuring
+
+// const obj = {
+//   name: "Manoj",
+//   age:26,
+//   address:"Mysore",
+//   qualification:"PU",
+//   favs:{
+//     // movie:"HP",
+//     song:"ijhakd",
+//   },
+//   printInfo:function({val2, val1}){
+//     console.log(val2, val1);
+//   }
+// }
+
+// obj.printInfo({
+//   val1:"Hello",
+//   val2:"Hello2"
+// })
+
+// Basic destructuring
+// const {age, name, address} = obj
+// console.log(name,age,address);
+
+// Aliasing & defalut values
+// const {age:myAge, name:firstName, address:myAddress, qualification="Degree"}= obj
+
+// console.log(myAge, myAddress, firstName, qualification);
+
+// const {favs:{movie:myFavMovie="HP"}} = obj
+// console.log(myFavMovie);
+
