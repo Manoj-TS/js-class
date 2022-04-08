@@ -343,13 +343,13 @@
 //   }else{
 //       console.log("Could not prepare juice, check for fruit count");
 //   }
-  
+
 // };
 
 // juiceMaker("Apple", 9);
 
 // Arrays
-const friends = ["Sanju", "Raghu", "Raam", "Ravi"]
+const friends = ["Sanju", "Raghu", "Raam", "Ravi"];
 // Accessing values in an array
 // friends[0]= "Raaj"
 
@@ -364,39 +364,82 @@ const friends = ["Sanju", "Raghu", "Raam", "Ravi"]
 // accessing nested array elements
 // console.log(info[6][1]);
 
-
 // Array methods
 
-// To add elements at the end of the array
-friends.push("Savitha")
-friends.push("Kavi")
-console.log(friends.push("Kavi"));
-console.log(friends);
+// // To add elements at the end of the array
+// friends.push("Savitha")
+// friends.push("Kavi")
+// console.log(friends.push("Kavi"));
+// console.log(friends);
 
+// // To add elements at the beginning of the array
+// friends.unshift("Praveen")
+// friends.unshift("Chandan")
+// console.log(friends);
+// console.log(friends.unshift("Chandan"));
+// console.log(friends.unshift("Chandan"));
 
-// To add elements at the beginning of the array
-friends.unshift("Praveen")
-friends.unshift("Chandan")
-console.log(friends);
-console.log(friends.unshift("Chandan"));
-console.log(friends.unshift("Chandan"));
+// // Array length
+// console.log(friends.length);
 
-// Array length
-console.log(friends.length);
-
-// removing elements at the end
-const poppedEle = friends.pop()
-console.log(friends);
-console.log("Popped element "+poppedEle);
+// // removing elements at the end
+// const poppedEle = friends.pop()
+// console.log(friends);
+// console.log("Popped element "+poppedEle);
 
 // removing element at the front
-console.log(friends.shift());
+// console.log(friends.shift());
 
+// const arr = [1,2,3]
 
-const arr = [1,2,3]
+// function greet(array){
+//   console.log(array.length);
+// }
 
-function greet(array){
-  console.log(array.length);
-}
+// greet(arr)
 
-greet(arr)
+// Ternary operator or Conditional operator
+
+// const hasLiscence = true;
+// const hasGoodVision = false;
+
+// if(hasLiscence){
+//   console.log("Eligible to drive");
+// }else{
+//   console.log("Cannot drive");
+// }
+
+// hasLiscence
+//   ? hasGoodVision
+//     ? console.log("Eligible to get drive")
+//     : console.log("Cannot drive")
+//   : console.log("Cannot drive");
+
+// Selecting html elements
+// console.dir(document.querySelector('#main-para'));
+// console.log(document.getElementById('main-para'));
+// console.log(document.getElementsByClassName('main-heading'));
+
+// console.log(document.querySelectorAll('.para'));
+
+// Manipulating html elements
+const h1 = document.querySelector('.main-heading')
+const image = document.querySelector('img')
+
+console.log(h1.innerHTML);
+
+h1.textContent = "Manoj"
+h1.innerHTML = "<span>Hello</span> <a href=\"#\">Manoj</a>"
+
+image.src = "nature2.jpg"
+
+// Manupulating the styles
+// h1.style.color = "white"
+// h1.style.backgroundColor = "red"
+// h1.style.padding = "20px"
+
+const heading = document.createElement('h1')
+
+heading.textContent = "New Heading"
+
+document.querySelector('body').append(heading)
