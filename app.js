@@ -392,12 +392,12 @@
 
 // Implicit type conversion (Coercion)
 
-// String coercion
-console.log("abc" + 123);
-console.log("abc" + true);
-console.log("abc" + undefined);
-console.log("abc" + null);
-console.log("abc" + NaN);
+// // String coercion
+// console.log("abc" + 123);
+// console.log("abc" + true);
+// console.log("abc" + undefined);
+// console.log("abc" + null);
+// console.log("abc" + NaN);
 
 // Number coercion
 // console.log("123"*10); // 1230
@@ -494,10 +494,8 @@ console.log("abc" + NaN);
 
 // console.log(val1,val2);
 
-
 // Destructuring nested array
 // const arr = [1, 2, 6, [10, 20, 30, [10, 50]],100,200];
-
 
 // const [, , , [, , , [a, b]]] = arr;
 // console.log(a, b);
@@ -540,3 +538,139 @@ console.log("abc" + NaN);
 // const {favs:{movie:myFavMovie="HP"}} = obj
 // console.log(myFavMovie);
 
+// For of loop
+
+// for arrays
+const arr = ["a", "b", 3, 4, 6];
+
+for (const [i, el] of arr.entries()) {
+  console.log(el, i);
+}
+
+// Objects
+
+const restuarant = {
+  name: "Nalpak",
+  openHours: {
+    mon: {
+      open: "10AM",
+      close: "10PM",
+    },
+    wed: {
+      open: "9AM",
+      close: "8PM",
+    },
+    thur: {
+      open: "8AM",
+      close: "10PM",
+    },
+    fri: {
+      open: "10AM",
+      close: "10PM",
+    },
+  },
+};
+
+// const restKeys = Object.keys(restuarant)
+// // console.log(keys);
+// const restValues = Object.values(restuarant)
+// console.log(restValues);
+
+// const objEntries = Object.entries(restuarant)
+// console.log(objEntries);
+
+// for(const key of Object.keys(restuarant.openHours)){
+//   console.log(key);
+// }
+
+// for(const [day, {open, close}] of Object.entries(restuarant.openHours)){
+//   console.log(`On ${day} we are open at ${open} and close at ${close}`);
+// }
+
+// Enhanced Object literals
+
+// Traditional way
+const rest = new Object({
+  name: "AtoZ",
+});
+
+const openHours = {
+  mon: {
+    open: "10AM",
+    close: "10PM",
+  },
+  wed: {
+    open: "9AM",
+    close: "8PM",
+  },
+  thur: {
+    open: "8AM",
+    close: "10PM",
+  },
+  fri: {
+    open: "10AM",
+    close: "10PM",
+  },
+};
+
+// ES6 or literal oject
+// const rest1 = {
+//   name:"Test",
+//   // openHours:openHours
+//   openHours,
+//   // order:function(item){
+//   //   console.log('Ordered '+item);
+//   // }
+
+//   order(item){
+//     console.log('Ordered '+item);
+//   },
+
+//   // computed property names
+//   [Object.keys(openHours)[1]]:"Hello"
+// };
+
+// console.log(rest1.wed);
+
+
+// Working with strings
+// Strings are immutable
+
+// let str = "abc"
+
+// str+="d"
+// console.log(str);
+
+
+const str = "Hello world how afe you doing"
+
+console.log(str[0]);
+console.log(str[1]);
+console.log(str.indexOf('r'))
+console.log(str.lastIndexOf('r'))
+console.log(str.indexOf('world'))
+
+let newStr = str.slice(6)
+newStr = str.slice(6,9)
+console.log(newStr);
+
+
+// console.log(str);
+
+
+function returnFirstWord(str){
+  console.log(str.slice(0, str.indexOf(" ")));
+}
+function returnLastWord(str){
+  console.log(str.slice(str.lastIndexOf(" ")+1));
+}
+
+
+returnFirstWord("Hi How")
+returnFirstWord("Hello How")
+returnFirstWord("Manojkjds How")
+returnFirstWord("Hello How")
+
+returnLastWord("hi Manoj a bcd hgf")
+returnLastWord("hi ravi welcome")
+returnLastWord("hi ravi")
