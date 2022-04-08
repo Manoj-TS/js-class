@@ -326,24 +326,77 @@
 // console.log(fruitSlicer(10));
 
 // functions calling other functions
-const fruitSlicer = (fruitCount) => {
-  if (fruitCount >= 10) {
-    console.log("Fruit count too large");
-    return;
-  }
+// const fruitSlicer = (fruitCount) => {
+//   if (fruitCount >= 10) {
+//     console.log("Fruit count too large");
+//     return;
+//   }
 
-  return fruitCount * 10;
-};
+//   return fruitCount * 10;
+// };
 
-const juiceMaker = (fruit, fruitCount) => {
-  const fruitPieces = fruitSlicer(fruitCount);
-
-  if(fruitPieces){
-    console.log(`Juice with ${fruitPieces} ${fruit} pieces is ready`);
-  }else{
-      console.log("Could not prepare juice, check for fruit count");
-  }
+// const juiceMaker = (fruit, fruitCount) => {
+//   const fruitPieces = fruitSlicer(fruitCount);
+//   console.log(fruitPieces);
+//   if(fruitPieces){
+//     console.log(`Juice with ${fruitPieces} ${fruit} pieces is ready`);
+//   }else{
+//       console.log("Could not prepare juice, check for fruit count");
+//   }
   
-};
+// };
 
-juiceMaker("Apple", 50);
+// juiceMaker("Apple", 9);
+
+// Arrays
+const friends = ["Sanju", "Raghu", "Raam", "Ravi"]
+// Accessing values in an array
+// friends[0]= "Raaj"
+
+// // console.log(friends[0]+friends[1]);
+// console.log(friends[0]);
+// console.log(friends[2]);
+// console.log(friends[3]);
+
+// We can store different data types in an array
+// const info = ["Manoj", 60, true, undefined, null, NaN, ["a", "Hello"]]
+
+// accessing nested array elements
+// console.log(info[6][1]);
+
+
+// Array methods
+
+// To add elements at the end of the array
+friends.push("Savitha")
+friends.push("Kavi")
+console.log(friends.push("Kavi"));
+console.log(friends);
+
+
+// To add elements at the beginning of the array
+friends.unshift("Praveen")
+friends.unshift("Chandan")
+console.log(friends);
+console.log(friends.unshift("Chandan"));
+console.log(friends.unshift("Chandan"));
+
+// Array length
+console.log(friends.length);
+
+// removing elements at the end
+const poppedEle = friends.pop()
+console.log(friends);
+console.log("Popped element "+poppedEle);
+
+// removing element at the front
+console.log(friends.shift());
+
+
+const arr = [1,2,3]
+
+function greet(array){
+  console.log(array.length);
+}
+
+greet(arr)
