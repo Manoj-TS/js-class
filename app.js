@@ -541,35 +541,35 @@
 // For of loop
 
 // for arrays
-const arr = ["a", "b", 3, 4, 6];
+// const arr = ["a", "b", 3, 4, 6];
 
-for (const [i, el] of arr.entries()) {
-  console.log(el, i);
-}
+// for (const [i, el] of arr.entries()) {
+//   console.log(el, i);
+// }
 
 // Objects
 
-const restuarant = {
-  name: "Nalpak",
-  openHours: {
-    mon: {
-      open: "10AM",
-      close: "10PM",
-    },
-    wed: {
-      open: "9AM",
-      close: "8PM",
-    },
-    thur: {
-      open: "8AM",
-      close: "10PM",
-    },
-    fri: {
-      open: "10AM",
-      close: "10PM",
-    },
-  },
-};
+// const restuarant = {
+//   name: "Nalpak",
+//   openHours: {
+//     mon: {
+//       open: "10AM",
+//       close: "10PM",
+//     },
+//     wed: {
+//       open: "9AM",
+//       close: "8PM",
+//     },
+//     thur: {
+//       open: "8AM",
+//       close: "10PM",
+//     },
+//     fri: {
+//       open: "10AM",
+//       close: "10PM",
+//     },
+//   },
+// };
 
 // const restKeys = Object.keys(restuarant)
 // // console.log(keys);
@@ -590,28 +590,28 @@ const restuarant = {
 // Enhanced Object literals
 
 // Traditional way
-const rest = new Object({
-  name: "AtoZ",
-});
+// const rest = new Object({
+//   name: "AtoZ",
+// });
 
-const openHours = {
-  mon: {
-    open: "10AM",
-    close: "10PM",
-  },
-  wed: {
-    open: "9AM",
-    close: "8PM",
-  },
-  thur: {
-    open: "8AM",
-    close: "10PM",
-  },
-  fri: {
-    open: "10AM",
-    close: "10PM",
-  },
-};
+// const openHours = {
+//   mon: {
+//     open: "10AM",
+//     close: "10PM",
+//   },
+//   wed: {
+//     open: "9AM",
+//     close: "8PM",
+//   },
+//   thur: {
+//     open: "8AM",
+//     close: "10PM",
+//   },
+//   fri: {
+//     open: "10AM",
+//     close: "10PM",
+//   },
+// };
 
 // ES6 or literal oject
 // const rest1 = {
@@ -632,7 +632,6 @@ const openHours = {
 
 // console.log(rest1.wed);
 
-
 // Working with strings
 // Strings are immutable
 
@@ -641,36 +640,154 @@ const openHours = {
 // str+="d"
 // console.log(str);
 
+// const str = "Hello world how afe you doing"
 
-const str = "Hello world how afe you doing"
+// console.log(str[0]);
+// console.log(str[1]);
+// console.log(str.indexOf('r'))
+// console.log(str.lastIndexOf('r'))
+// console.log(str.indexOf('world'))
 
-console.log(str[0]);
-console.log(str[1]);
-console.log(str.indexOf('r'))
-console.log(str.lastIndexOf('r'))
-console.log(str.indexOf('world'))
+// let newStr = str.slice(6)
+// newStr = str.slice(6,9)
+// console.log(newStr);
 
-let newStr = str.slice(6)
-newStr = str.slice(6,9)
-console.log(newStr);
+// // console.log(str);
+
+// function returnFirstWord(str){
+//   console.log(str.slice(0, str.indexOf(" ")));
+// }
+// function returnLastWord(str){
+//   console.log(str.slice(str.lastIndexOf(" ")+1));
+// }
+
+// returnFirstWord("Hi How")
+// returnFirstWord("Hello How")
+// returnFirstWord("Manojkjds How")
+// returnFirstWord("Hello How")
+
+// returnLastWord("hi Manoj a bcd hgf")
+// returnLastWord("hi ravi welcome")
+// returnLastWord("hi ravi")
+
+// const restuarant = {
+//     name: "Nalpak",
+//     openHours: {
+//       mon: {
+//         open: "10AM",
+//         close: "10PM",
+//       },
+//       wed: {
+//         open: "9AM",
+//         close: "8PM",
+//       },
+//       thur: {
+//         open: "8AM",
+//         close: "10PM",
+//       },
+//       fri: {
+//         open: "10AM",
+//         close: "10PM",
+//       },
+//     },
+//     // order(){
+//     //     console.log(`food ordered`);
+//     // }
+//   };
+
+//   const arr = [1,2,4,{a:12,b:10},[5,6,8]]
+
+//   Optional chaining (?.)
+
+// On objects
+//   console.log(restuarant.openHours.sat?.open.close);
+// // On array
+//   console.log(arr[4][4]?.[0]);
+
+// // On Function
+// console.log(restuarant.order?.());
+
+// if(restuarant.order){
+//     restuarant.order()
+// }else{
+//     console.log('not a function');
+// }
+
+// String method
+// indexing, slicing
+// to change cases - upperCase, lowerCase
+
+// const str = "     Hello World    "
+// console.log(str.toLowerCase());
+// console.log(str.toUpperCase());
+
+// Trim - removes whitespace from both ends
+// console.log(str.trim().toUpperCase());
+
+// mANoJ
+
+// const strCapitalize = (strVal)=>{
+//     const CaptStrVal = strVal.trim()[0].toUpperCase() + strVal.trim().slice(1).toLowerCase()
+//     console.log(CaptStrVal);
+// }
+// strCapitalize('    mANoJ   ')
+// strCapitalize('   gaNESH   ')
+
+// Replacing - replaces the first occurance of the target
+// 'use strict'
+// const str = '$235.56$'
+
+// console.log(str.replace('$', 'Rs').replace('.', ','));
+
+// console.log(str.replaceAll('$', 'Rs'));
+
+// Regular expression
+// const a =
+// console.log(str.replaceAll(/$/g, 'Rs'));
+
+// // console.log();
+// str[str.length - 1] = "H"
+// console.log();
+
+// Array Methods
+// Data transformation methods
+
+const arr = [50, 20, 40, -10, -30];
+
+// const resArr = []
+
+// for(const el of arr){
+//     resArr.push(el * 10)
+// }
+
+// Map method (el, i, arr)
+
+// const resArr = arr.map(el=>el*10)
+
+// console.log(resArr);
+// console.log(arr);
+
+// Filter
+
+// const resArr = [];
+
+// for (const el of arr) {
+//   if (el > 0) resArr.push(el);
+// }
+
+// console.log(resArr);
+
+// const resArr = arr.filter((el) => el > 0);
+
+// console.log(resArr);
 
 
-// console.log(str);
+// Reduce (accumulator, curEle, Index, arr)
 
+// const sum = arr.reduce((acc, el) => acc+el)
+// console.log(sum);
 
-function returnFirstWord(str){
-  console.log(str.slice(0, str.indexOf(" ")));
-}
-function returnLastWord(str){
-  console.log(str.slice(str.lastIndexOf(" ")+1));
-}
+// Find returns the first occurance of the fond element or returns undefined
 
-
-returnFirstWord("Hi How")
-returnFirstWord("Hello How")
-returnFirstWord("Manojkjds How")
-returnFirstWord("Hello How")
-
-returnLastWord("hi Manoj a bcd hgf")
-returnLastWord("hi ravi welcome")
-returnLastWord("hi ravi")
+// const foundEle = arr.find(el=> el > 10)
+// console.log(foundEle);
