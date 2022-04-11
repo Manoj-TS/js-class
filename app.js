@@ -423,23 +423,181 @@ const friends = ["Sanju", "Raghu", "Raam", "Ravi"];
 // console.log(document.querySelectorAll('.para'));
 
 // Manipulating html elements
-const h1 = document.querySelector('.main-heading')
-const image = document.querySelector('img')
+// const h1 = document.querySelector('.main-heading')
+// const image = document.querySelector('img')
 
-console.log(h1.innerHTML);
+// console.log(h1.innerHTML);
 
-h1.textContent = "Manoj"
-h1.innerHTML = "<span>Hello</span> <a href=\"#\">Manoj</a>"
+// h1.textContent = "Manoj"
+// h1.innerHTML = "<span>Hello</span> <a href=\"#\">Manoj</a>"
 
-image.src = "nature2.jpg"
+// image.src = "nature2.jpg"
 
 // Manupulating the styles
 // h1.style.color = "white"
 // h1.style.backgroundColor = "red"
 // h1.style.padding = "20px"
 
-const heading = document.createElement('h1')
+// const heading = document.createElement('h1')
 
-heading.textContent = "New Heading"
+// heading.textContent = "New Heading"
 
-document.querySelector('body').append(heading)
+// document.querySelector('body').append(heading)
+
+// Modern Operators
+
+// Destructuring Arrays and Objects (ES6)
+// Array Destructuring
+// const arr = [20, 30, 40, 50];
+// const num1 = arr[0]
+// const num2 = arr[1]
+
+// const [num1, num2] = arr;
+// console.log(num1, num2);
+
+// Leaving a hole while destructuring
+// const [num1, , ,num2] = arr
+// console.log(num1, num2);
+
+// Assigning default values
+// const [num1, , , num2 = 5, num3 = 30] = arr;
+// console.log(num1, num2, num3);
+
+// Swaping values
+// let a = 50;
+// let b = 80;
+
+// Traditional swapping
+// const temp = a;
+// a = b;
+// b = a;
+
+// Using destructuring
+// [b,a]=[a,b]
+// console.log(a,b);
+
+// Destructuring nested arrays
+// const arr2 = [10, 20, [30, 40, 90, ["Hello", "Bye"]]];
+
+// const [, , [, , , [a, b]]] = arr2;
+// console.log(a, b);
+
+// Destructuring Objects
+const restuarant = {
+  name: "Nalpak",
+  openHours: {
+    mon: {
+      open: "10AM",
+      close: "10pm",
+    },
+    tue: {
+      open: "8AM",
+      close: "10pm",
+    },
+    wed: {
+      open: "7AM",
+      close: "8PM",
+    },
+    thur: {
+      open: "10AM",
+      close: "10pm",
+    },
+  },
+  address: "#445,Mysore 570027",
+  owner: "Raghu",
+};
+
+// Simple destructuring
+// const {address,name} = restuarant
+
+// Aliasing
+// const {address:restAddress,name:restName} = restuarant
+
+// console.log(restAddress, restName);
+
+// Setting default values
+// const {owner="Manoj"}=restuarant
+// console.log(owner);
+
+// Nested destructuring
+// const {openHours:{thur:{open,close}}} = restuarant
+// console.log(open,close);
+
+// const {open,close}= restuarant.openHours.thur
+
+// Spread operator (...)
+const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// let a = 50
+// console.log(arr[0],arr[1]);
+// console.log(...arr);
+console.log(arr);
+
+// Array Copy
+// const arr2 = arr
+// let b = a
+// a = 70
+// console.log(b);
+// console.log(a);
+
+// arr.push("Hello")
+
+// console.log(arr2);
+// console.log(arr);
+
+// Using spread
+// const arrCopy = [...arr]
+// const arr2 = []
+
+// for(i=0;i<arr.length;i++) arr2.push(arr[i])
+
+// arr.push("Hello")
+
+// console.log(arr);
+// console.log(arr2);
+// console.log(arrCopy);
+
+// const newArr = ["Manoj","Value", ...arr]
+// console.log(newArr);
+
+// Spreading object values
+
+// const objCopy = {
+//   ...restuarant,
+//   employees: ["Manoj", "Sanju"],
+//   order() {
+//     console.log("Food ordered");
+//   },
+// };
+// console.log(objCopy);
+
+// Rest pattern or operator (...)
+
+// const [firstValue,secondValue, ...restValue] = arr;
+// console.log(firstValue, secondValue, restValue);
+
+// Rest in objdestructuring
+// const {name,address, ...otherValues} = restuarant
+// console.log(otherValues);
+
+// const sum = (op1,op2,op3)=>{
+//     console.log(op1+op2+op3);
+// }
+
+// sum(1,2,3)
+// sum(1,2,3,4)
+
+const sum = (...ops) => {
+  console.log(ops);
+  let res = 0;
+  for (i = 0; i < ops.length; i++) res += ops[i];
+  console.log(res);
+};
+
+sum(1);
+sum(1, 2);
+sum(1, 2, 3);
+sum(1, 2, 5, 6, 7, 8, 9, 3);
+
+const values = [10, 20, 30];
+
+sum(...values);
