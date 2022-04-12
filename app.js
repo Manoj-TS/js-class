@@ -752,7 +752,7 @@
 // Array Methods
 // Data transformation methods
 
-const arr = [50, 20, 40, -10, -30];
+// const arr = [50, 20, 40, -10, -30];
 
 // const resArr = []
 
@@ -781,7 +781,6 @@ const arr = [50, 20, 40, -10, -30];
 
 // console.log(resArr);
 
-
 // Reduce (accumulator, curEle, Index, arr)
 
 // const sum = arr.reduce((acc, el) => acc+el)
@@ -791,3 +790,154 @@ const arr = [50, 20, 40, -10, -30];
 
 // const foundEle = arr.find(el=> el > 10)
 // console.log(foundEle);
+
+// Functions in Depth
+// Passing default parameters
+
+// function calcAge(birthYear = 1998){
+//   // birthYear = birthYear || 1998 // ES5 way
+//   console.log(2022-birthYear);
+// }
+
+// calcAge()
+// calcAge(2000)
+
+// How passing arguments work in js
+// JS has only passs by value type
+
+// const bookings = []
+// const flightNum = 123
+
+// const info = {
+//   passNum:18791289898,
+//   name:"Manoj"
+// }
+
+// function bookFlight(infoObj, flighNo){
+//   if(flighNo===123) flighNo = 235
+//   infoObj.name = "Mr."+infoObj.name
+//   const booking = {
+//       ...infoObj,
+//       flighNo
+//   }
+
+//   console.log(booking);
+//   bookings.push(booking)
+// }
+
+// bookFlight(info, flightNum)
+// console.log(info);
+// console.log(flightNum);
+
+// Functions are first class citizens (Concept)
+// It can be stored
+// It can be returned from a function
+// It can have methods and properties (Because function is an object value)
+
+// Higher order functions
+// addEventlistener is a higher order function because it accepts function as argument
+
+// If a function returns another function then it is called as Higher order function
+
+// const firstWordUpper = (str) => {
+//   const newStr =
+//     str.slice(0, str.indexOf(" ")).toUpperCase() +
+//     " "+str.slice(str.indexOf(" ") + 1);
+//   return newStr;
+// };
+
+// const transform = (str, transformMethod)=>{
+//   console.log(`${transformMethod(str)}`);
+// }
+
+// transform("Hello world", firstWordUpper)
+// transform("Hello world JS is the bEST", firstWordUpper)
+// transform("Hello world", firstWordUpper)
+
+// Function methods -- call, apply, bind
+
+const flighNum = 123;
+
+const AirIndia = {
+  airline: "AIR-India",
+  code: "AR",
+  bookings: [],
+  counter:0,
+  book(name, flightNum) {
+    console.log(
+      `${name} has booked a fligh in ${this.airline} and the fligh number is ${this.code}${flightNum}`
+    );
+    const bookObj = {
+      name,
+      flighNum,
+    };
+
+    this.bookings.push(bookObj);
+    console.log(this.bookings);
+  },
+};
+
+AirIndia.book("Manoj", 456)
+
+const Indigo = {
+  airline: "Indigo",
+  code: "IG",
+  bookings: [],
+};
+const Kingfisher = {
+  airline: "Kingfisher",
+  code: "KF",
+  bookings: [],
+};
+
+const book = AirIndia.book;
+
+// console.log(book);
+
+// console.log(this)
+
+
+// Call
+// First argument for the call method will decide which object should be pointed by this keyword
+// book.call(Indigo, "Manoj", 123);
+
+
+// infos = ["Manoj", 435, 656]
+// // Apply
+
+
+// book.apply(Kingfisher, infos)
+
+// book.call(Kingfisher, ...infos)
+
+
+// Bind -- Returns entirely new function with this keyword pointing to desired obj
+// const bookIG = book.bind(Indigo)
+// console.log(bookIG);
+
+// bookIG("Navven", 546)
+// bookIG("Raam", 334)
+
+// const bookKF = book.bind(Kingfisher)
+
+
+// // We can preset arguments
+// const bookKFVIP = book.bind(Kingfisher, "VIP")
+
+// bookKF("Manoj",654)
+// bookKF("Ravi",65677)
+
+// bookKFVIP(456)
+
+
+// const button = document.querySelector('button')
+
+// button.addEventListener('click', bookKFVIP)
+// button.addEventListener('click', book.bind(In))
+
+// IIFE - Immediately invoked function expression
+
+(function(){
+  const name = "Manoj"
+  console.log('This is a iffe function' + name);
+})()
